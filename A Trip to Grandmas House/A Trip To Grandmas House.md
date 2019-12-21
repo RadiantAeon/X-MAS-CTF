@@ -5,15 +5,15 @@
 ## Authors: Milkdrop, PinkiePie1189
 I downloaded the VDI file, and loaded it up into Oracle Virtualbox, which showed that it was a Windows 98 virtual machine. After poking around a little, I discovered that all the basic Windows 98 login tricks were patched(pressing esc, printer help menu, pressing cancel, etc.)
 Login screen:
-![alt text](https://github.com/RealAwesomeness/X-MAS-CTF/raw/master/A Trip To Grandmas House/images/loginscreen.png)
+![alt text](https://raw.githubusercontent.com/RealAwesomeness/X-MAS-CTF/master/A%20Trip%20to%20Grandmas%20House/Images/loggedin.png)
 I then loaded the file into a Kali virtual machine to see if I could get the flag without logging in, but there was no flag file, and as the hint states, you need to login without changing the resolution and view the desktop.
 After some googling, I discovered that you can boot up into Safe Mode by holding down right ctrl. Aftering entering safe mode, we are able to bypass the login by pressing esc. 
 Logged in in safe mode:
-![alt text](https://github.com/RealAwesomeness/X-MAS-CTF/raw/master/A Trip To Grandmas House/images/loggedinsafemode.png)
+![alt text](https://raw.githubusercontent.com/RealAwesomeness/X-MAS-CTF/master/A%20Trip%20to%20Grandmas%20House/Images/loggedinsafemode.png)
 However, the hint states that we should not change the resolution, which safe mode does. After a little more googling, I discovered [here](https://www.techrepublic.com/article/lock-it-down-prevent-windows-98-users-from-bypassing-the-logon-screen/) that by editing HKEY_LOCAL_MACHINE\Network\Logon\MustBeValidated in the system registry to 1 prevents the escape key trick, so I changed that to 0. I quickly reversed that while in safe mode and rebooted to test it - and it worked! However, half the desktop was broken because we had logged in once with the wrong resolution. So I redownloaded the VDI file, copied the system registry, **WINDOWS\SYSTEM.DAT**, from the machine we edited into Kali, and then saved the machine state. Then, I loaded the fresh copy into Kali and overwrote the system registry with the edited one. Once we boot up, we can press esc to bypass the login screen, and we are in. We can now see that the desktop files spell **mysekrit4tum**. There is also a text file called **secret.txt** that is filled with gibberish. 
 Logged in:
-![alt text](https://github.com/RealAwesomeness/X-MAS-CTF/raw/master/A Trip To Grandmas House/images/loggedincracked.png)
+![alt text](https://raw.githubusercontent.com/RealAwesomeness/X-MAS-CTF/master/A%20Trip%20to%20Grandmas%20House/Images/loggedincracked.png)
 After messing around, I found that it is a TrueCrypt file that we can load up with TrueCrypt inside the VM. The password for the **secret.txt** is the password we found spelled out on the desktop earlier. Inside, I found a Minecraft world, so I copied the files out of the encrypted folder and into the Documents folder of the VM so I extract them by using 7zip on VDI file (you can do that btw). After loading up the Minecraft world, I found that it was a super flat world with strips of missing blocks that looked suspiciously large, so I loaded it into a 2d minecraft map viewer, and voila, the flag was there.
 The flag!:
-![alt text](https://github.com/RealAwesomeness/X-MAS-CTF/raw/master/A Trip To Grandmas House/images/flag.png)
+![alt text](https://raw.githubusercontent.com/RealAwesomeness/X-MAS-CTF/master/A%20Trip%20to%20Grandmas%20House/Images/flag.png)
 ## X-MAS{Druaga1_W0uld've_ruN__th1s_0n_4n_SSD}
