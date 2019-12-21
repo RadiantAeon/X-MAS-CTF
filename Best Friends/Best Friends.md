@@ -3,8 +3,9 @@
 
 ## Files: [HDD.vdi](https://drive.google.com/file/d/1reqctkHMQZ3L3yW04r3ZpUKKFef-RJsP/view?usp=sharing)
 ## Authors: yakuhito
-After downloading the file, the first thing to do in any forensics situation is to check for strings. The strings command turned up 2 strange strings, which, after some googling, were found to help mark the file as containing data hidden by steghide. There is also base64 on top as a comment that is layered with other encodings, but that is just a hint that says **Maybe B.F. stands for something other than best friend :)**.
+After downloading the file, the first thing to do in any forensics situation is to check for strings. The strings command turned up 2 strange strings, which, after some googling, were found to help mark the file as containing data hidden by steghide. 
 ![alt text](https://raw.githubusercontent.com/RealAwesomeness/X-MAS-CTF/master/Best%20Friends/Images/strings.png)
+There is also base64 on top as a comment that is layered with other encodings, but that is just a hint that says **Maybe B.F. stands for something other than best friend :)**.
 I then used [**stegcracker**](https://github.com/Paradoxis/StegCracker) to crack the password of the file which turned out to be **celeste**. The output is a file called flag.txt with the following text:
 ###Maybe increasing the alphabet will make the encryption better
 ###==m65;gVJW1O3>K5^?^YBJag<1i?Yd8RF2n?Sl,' &lt;GaR1F'iB4F&ast;(c$E\V-CA7&hUA79"\AMGqo2Dd&ast;J@:O]
