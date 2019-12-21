@@ -1,7 +1,7 @@
 # A Trip To Grandmas House
 ## This Christmas I went to grandma's house and booted up my old computer from when I was a kid! Sadly, I don't remember my password, but I'm really curious to see what I had in there :(
 
-## Files: [HDD.vdi](https://drive.google.com/file/d/1bpYibYykcR4EyC1lYZN7d94tWBrFATSx/view?usp=sharinghttps://drive.google.com/file/d/1bpYibYykcR4EyC1lYZN7d94tWBrFATSx/view?usp=sharingv)
+## Files: [HDD.vdi](https://drive.google.com/file/d/1bpYibYykcR4EyC1lYZN7d94tWBrFATSx/view?usp=sharinghttps://drive.google.com/file/d/1bpYibYykcR4EyC1lYZN7d94tWBrFATSx/view?usp=sharing)
 ## Authors: Milkdrop, PinkiePie1189
 I downloaded the VDI file, and loaded it up into Oracle Virtualbox, which showed that it was a Windows 98 virtual machine. After poking around a little, I discovered that all the basic Windows 98 login tricks were patched(pressing esc, printer help menu, pressing cancel, etc.)
 ![alt text](https://raw.githubusercontent.com/RealAwesomeness/X-MAS-CTF/master/A%20Trip%20to%20Grandmas%20House/Images/loginscreen.png)
