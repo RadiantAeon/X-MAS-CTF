@@ -11,7 +11,7 @@ There is also base64 on top as a comment that is layered with other encodings, b
 I then used [**stegcracker**](https://github.com/Paradoxis/StegCracker) to crack the password of the file which turned out to be **celeste**. The output is a file called flag.txt with the following text:
 **Maybe increasing the alphabet will make the encryption better ==m65;gVJW1O3>K5^?^YBJag<1i?Yd8RF2n?Sl,' &lt;GaR1F'iB4F&ast;(c$E\V-CA7&hUA79"\AMGqo2Dd&ast;J@:O]***
 
-After messing around in [Cyber Chef](https://gchq.github.io/CyberChef/#recipe=From_Base85('!-u')&input=PT1tNjU7Z1ZKVzFPMz5LNV4/XllCSmFnPDFpP1lkOFJGMm4/U2wsJzxHYVIxRidpQjRGKihjJEVcVi1DQTcmaFVBNzkiXEFNR3FvMkRkKkpAOk9d) I found that the text below was base85 encoded.
+After messing around in [**Cyber Chef**](https://gchq.github.io/CyberChef/#recipe=From_Base85('!-u')&input=PT1tNjU7Z1ZKVzFPMz5LNV4/XllCSmFnPDFpP1lkOFJGMm4/U2wsJzxHYVIxRidpQjRGKihjJEVcVi1DQTcmaFVBNzkiXEFNR3FvMkRkKkpAOk9d) I found that the text below was base85 encoded.
 
 ![alt text](https://raw.githubusercontent.com/RealAwesomeness/X-MAS-CTF/master/Best%20Friends/Images/decode.png)
 
